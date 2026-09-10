@@ -13,7 +13,9 @@ test.describe("Home page", () => {
     await expect(homePage.heading).toContainText("To get started");
 
     const hasHorizontalOverflow = await page.evaluate(
-      () => document.documentElement.scrollWidth > document.documentElement.clientWidth,
+      () =>
+        document.documentElement.scrollWidth >
+        document.documentElement.clientWidth,
     );
     expect(hasHorizontalOverflow).toBe(false);
   });
@@ -22,12 +24,18 @@ test.describe("Home page", () => {
     const homePage = new HomePage(page);
     await homePage.goto();
 
-    await expect(homePage.astroHomepageLink).toHaveAttribute("href", "https://astro.build");
+    await expect(homePage.astroHomepageLink).toHaveAttribute(
+      "href",
+      "https://astro.build",
+    );
     await expect(homePage.documentationLink).toHaveAttribute(
       "href",
       "https://docs.astro.build",
     );
-    await expect(homePage.discordLink).toHaveAttribute("href", "https://astro.build/chat");
+    await expect(homePage.discordLink).toHaveAttribute(
+      "href",
+      "https://astro.build/chat",
+    );
     await expect(homePage.newsLink).toHaveAttribute(
       "href",
       "https://astro.build/blog/astro-7/",
@@ -46,7 +54,9 @@ test.describe("Home page", () => {
     expect(errors).toEqual([]);
   });
 
-  test("has no automatically detectable WCAG A or AA violations", async ({ page }) => {
+  test("has no automatically detectable WCAG A or AA violations", async ({
+    page,
+  }) => {
     await new HomePage(page).goto();
 
     const results = await new AxeBuilder({ page })
