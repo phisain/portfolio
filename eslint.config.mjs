@@ -58,6 +58,14 @@ export default defineConfig([
 
   // Ignore patterns
   {
-    ignores: ["dist/**", "**/*.d.ts", ".github/"],
+    ignores: [
+      ".astro/**",
+      "coverage/**",
+      "dist/**",
+      "playwright-report/**",
+      "test-results/**",
+      "**/*.d.ts",
+      ".github/",
+    ],
   },
 ]);
