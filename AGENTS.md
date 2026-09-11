@@ -13,7 +13,7 @@ This Astro 7 portfolio uses Tailwind CSS 4 and strict TypeScript 6. The homepage
 
 ## Build, Test, and Development Commands
 
-Use Node.js >=22.12.0 and pnpm; CI uses Node 22 and pnpm 10. Dependencies are already installed. Run `pnpm install` only for setup or dependency changes; include lockfile updates.
+Use Node.js >=24.0.0 and pnpm; CI uses Node 24 and pnpm 10. Dependencies are already installed. Run `pnpm install` only for setup or dependency changes; include lockfile updates.
 
 - `pnpm dev --background`: start development in the required background mode.
 - `pnpm exec astro dev status` (or `logs`, `stop`): manage development.
